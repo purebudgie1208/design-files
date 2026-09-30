@@ -1,0 +1,19 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Navigation" subtitle="Top bar, nav items, carousel, footer" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script src="../../_ds_bundle.js"></script><style>html,body{margin:0;background:var(--surface-canvas);font-family:var(--font-core)}#root{padding:0}.lbl{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint);margin:14px 0 8px;padding:0 16px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const {NavBar,Footer,Carousel,NavItem}=window.OxfordDesignSystem_ec40d0;
+function Demo(){const [i,setI]=React.useState(0);
+ return <div style={{transform:"scale(.55)",transformOrigin:"top left",width:"182%"}}>
+  <NavBar active="Research"/>
+  <div style={{display:"flex",gap:40,alignItems:"center",padding:"22px 24px",background:"var(--white)"}}>
+    <NavItem>About</NavItem><NavItem hasMenu={false}>News</NavItem><Carousel count={8} index={i} onChange={setI}/><Carousel orientation="vertical" count={3} index={i} onChange={setI}/>
+  </div>
+  <div style={{padding:16}}><Footer/></div>
+ </div>}
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo/>);
+</script></body></html>

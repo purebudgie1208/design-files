@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Cards" subtitle="Stat, feature, event, news, program row" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script src="../../_ds_bundle.js"></script><style>html,body{margin:0;background:var(--white);font-family:var(--font-core)}#root{padding:22px 24px}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lbl{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const {StatCard,FeatureCard,EventCard,NewsCard,ProgramRow}=window.OxfordDesignSystem_ec40d0;
+function Demo(){return <div style={{display:"flex",flexDirection:"column",gap:18}}>
+ <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14}}>
+  <StatCard label="Students" value="25,000+" description="Across undergraduate and postgraduate levels" style={{minHeight:170}}/>
+  <div style={{background:"var(--surface-inverse)",borderRadius:"var(--radius-card)",padding:12}}>
+   <FeatureCard index="01" icon="graduation-cap" title="Top-Ranked Education" description="Oxford consistently ranks among the world's top universities, recognised for its academic excellence."/>
+  </div>
+ </div>
+ <ProgramRow index="01" title="Undergraduate" description="World-class bachelor's degrees with personalised tutorials and a rich academic environment." last/>
+ <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:20}}>
+  <EventCard image="../../assets/imagery/event-museum.png" title="Oxford Science Festival" year="2025" venue="University Museum"/>
+  <NewsCard image="../../assets/imagery/news-graduation.png" date="10 Jun 2025" author="Elizabeth Lincoln" title="Oxford tops national spinout rankings in 2025 report" readTime="9 min Read"/>
+ </div>
+</div>}
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo/>);
+</script></body></html>

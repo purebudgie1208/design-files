@@ -1,0 +1,4 @@
+/* Core grotesk. SUBSTITUTION: the source screenshots use a licensed Neue-Montreal/Helvetica-Now-class grotesk.
+   Schibsted Grotesk is the closest Google Fonts match. Swap the @font-face closure here if real files arrive. */
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+:root{--font-core:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;--font-display:var(--font-core);--font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace}
